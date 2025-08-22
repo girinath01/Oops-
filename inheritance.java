@@ -1,34 +1,34 @@
-class Vehicle {
-    void start() {
-        System.out.println("Vehicle is starting");
+class Appliance {
+    void turnOn() {
+        System.out.println("Appliance is turned ON");
     }
 }
 
-class Car extends Vehicle {
-    void drive() {
-        System.out.println("Car is driving");
+class WashingMachine extends Appliance {
+    void startWash() {
+        System.out.println("Washing Machine started washing");
     }
 }
 
-class SportsCar extends Car {
-    void turbo() {
-        System.out.println("SportsCar turbo mode activated");
+class SmartWashingMachine extends WashingMachine {
+    void connectWiFi() {
+        System.out.println("Smart Washing Machine connected to WiFi");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car();
+        WashingMachine wm = new WashingMachine();
         System.out.println("Single Inheritance:");
-        car.start();
-        car.drive();
+        wm.turnOn();
+        wm.startWash();
 
         System.out.println();
 
-        SportsCar sportsCar = new SportsCar();
+        SmartWashingMachine swm = new SmartWashingMachine();
         System.out.println("Multilevel Inheritance:");
-        sportsCar.start();
-        sportsCar.drive();
-        sportsCar.turbo();
+        swm.turnOn();
+        swm.startWash();
+        swm.connectWiFi();
     }
 }
